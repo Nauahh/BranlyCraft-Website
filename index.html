@@ -67,7 +67,7 @@ nav.scrolled {
   -webkit-font-smoothing: none;
 }
 .nav-logo span { color: #a78bfa; }
-.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links { display: flex; gap: 36px; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
 .nav-links a {
   font-size: 13px; font-weight: 500;
   color: var(--text-2); text-decoration: none;
@@ -88,6 +88,15 @@ nav.scrolled {
   transition: background .2s, transform .15s;
 }
 .btn-discord:hover { background: #4752c4; transform: translateY(-1px); }
+
+.btn-insta {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: #fff; text-decoration: none;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  padding: 8px 18px; border-radius: 6px;
+  transition: opacity .2s, transform .15s;
+}
+.btn-insta:hover { opacity: .85; transform: translateY(-1px); }
 
 .btn-play {
   display: flex; align-items: center; gap: 7px;
@@ -463,38 +472,18 @@ footer {
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
-  <div class="nav-logo">Branly<span>Craft</span></div>
   <ul class="nav-links">
     <li><a href="index.html" class="nav-active">Accueil</a></li>
     <li><a href="mods.html">Mods</a></li>
     <li><a href="#discord">Discord</a></li>
     <li><a href="#download">Télécharger</a></li>
   </ul>
-  <div class="nav-right">
-    <a href="https://discord.gg/aYTyZm8Z7c" target="_blank" class="btn-discord">
-      <svg width="16" height="16" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
-      Discord
-    </a>
-    <a href="#download" class="btn-play">Jouer</a>
-  </div>
+  <div class="nav-right"></div>
 </nav>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-grid"></div>
-
-  <!-- Statut serveur -->
-  <div id="server-status" style="
-    display:inline-flex; align-items:center; gap:10px;
-    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
-    border-radius:10px; padding:10px 20px; margin-bottom:28px;
-    font-size:13px; font-weight:500; color:rgba(255,255,255,.6);
-    opacity:0; animation: up .6s .15s forwards;
-  ">
-    <span id="srv-dot" style="width:8px;height:8px;border-radius:50%;background:#555;flex-shrink:0;transition:background .4s;"></span>
-    <span id="srv-text">Connexion au serveur…</span>
-    <span id="srv-players" style="margin-left:4px;font-weight:700;color:#fff;"></span>
-  </div>
 
   <h1 class="hero-title">
     <span class="white">Branly</span><span class="purple">Craft</span>
@@ -522,6 +511,19 @@ footer {
       <svg width="17" height="17" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
       Discord
     </a>
+  </div>
+
+  <!-- Statut serveur -->
+  <div id="server-status" style="
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+    border-radius:10px; padding:10px 20px; margin-top:28px;
+    font-size:13px; font-weight:500; color:rgba(255,255,255,.6);
+    opacity:0; animation: up .6s .5s forwards;
+  ">
+    <span id="srv-dot" style="width:8px;height:8px;border-radius:50%;background:#555;flex-shrink:0;transition:background .4s;"></span>
+    <span id="srv-text">Connexion au serveur…</span>
+    <span id="srv-players" style="margin-left:4px;font-weight:700;color:#fff;"></span>
   </div>
 
   <div class="scroll-down">
@@ -630,6 +632,7 @@ footer {
   <div class="footer-logo">Branly<span>Craft</span></div>
   <div class="footer-links">
     <a href="https://discord.gg/aYTyZm8Z7c" target="_blank">Discord</a>
+    <a href="https://instagram.com/branly_craft" target="_blank">Instagram</a>
     <a href="https://github.com/Nauahh" target="_blank">GitHub</a>
     <a href="#download">Télécharger</a>
   </div>
@@ -654,7 +657,7 @@ footer {
       a: .08+Math.random()*.18,
       flicker: Math.random()*Math.PI*2,
       fs: .015+Math.random()*.025,
-      color: Math.random() > .6 ? 'rgba(167,139,250,' : (Math.random()>.5 ? 'rgba(251,191,36,' : 'rgba(255,255,255,'),
+      color: Math.random()>.6 ? 'rgba(167,139,250,' : (Math.random()>.5 ? 'rgba(251,191,36,' : 'rgba(255,255,255,'),
     };
   }
 
