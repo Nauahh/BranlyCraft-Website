@@ -1,0 +1,1906 @@
+[
+  {
+    "name": "Accelerated Decay",
+    "required": true
+  },
+  {
+    "name": "Actually Additions",
+    "required": true
+  },
+  {
+    "name": "Additional Lights",
+    "required": true
+  },
+  {
+    "name": "Advanced AE",
+    "required": true
+  },
+  {
+    "name": "Advanced Peripherals",
+    "required": true
+  },
+  {
+    "name": "AE2 Import Export Card",
+    "required": true
+  },
+  {
+    "name": "AE2 JEI Integration",
+    "required": true
+  },
+  {
+    "name": "AE2:Crafting Tree",
+    "required": true
+  },
+  {
+    "name": "AE2NetworkAnalyzer",
+    "required": true
+  },
+  {
+    "name": "AE2WTLib",
+    "required": true
+  },
+  {
+    "name": "AEInfinityBooster",
+    "required": true
+  },
+  {
+    "name": "AI-Improvements",
+    "required": true
+  },
+  {
+    "name": "Akashic Tome",
+    "required": true
+  },
+  {
+    "name": "All The Arcanist Gear",
+    "required": true
+  },
+  {
+    "name": "All The Leaks",
+    "required": true
+  },
+  {
+    "name": "All the Wizard Gear",
+    "required": true
+  },
+  {
+    "name": "AllTheCompressed",
+    "required": true
+  },
+  {
+    "name": "Allthemodium",
+    "required": true
+  },
+  {
+    "name": "AllTheOres",
+    "required": true
+  },
+  {
+    "name": "AllTheTweaks",
+    "required": true
+  },
+  {
+    "name": "AlmostUnified",
+    "required": true
+  },
+  {
+    "name": "Amendments",
+    "required": true
+  },
+  {
+    "name": "Apotheosis",
+    "required": true
+  },
+  {
+    "name": "Apothic Attributes",
+    "required": true
+  },
+  {
+    "name": "Apothic Enchanting",
+    "required": true
+  },
+  {
+    "name": "Apothic Spawners",
+    "required": true
+  },
+  {
+    "name": "AppleSkin",
+    "required": true
+  },
+  {
+    "name": "Applied Energistics 2",
+    "required": true
+  },
+  {
+    "name": "Applied Mekanistics",
+    "required": true
+  },
+  {
+    "name": "AppliedFlux",
+    "required": true
+  },
+  {
+    "name": "Aquaculture 2",
+    "required": true
+  },
+  {
+    "name": "Architectury",
+    "required": true
+  },
+  {
+    "name": "Ars Additions",
+    "required": true
+  },
+  {
+    "name": "Ars Controle",
+    "required": true
+  },
+  {
+    "name": "Ars Creo",
+    "required": true
+  },
+  {
+    "name": "Ars Elemancy",
+    "required": true
+  },
+  {
+    "name": "Ars Elemental",
+    "required": true
+  },
+  {
+    "name": "Ars Nouveau",
+    "required": true
+  },
+  {
+    "name": "Ars Ocultas",
+    "required": true
+  },
+  {
+    "name": "Ars Polymorphia",
+    "required": true
+  },
+  {
+    "name": "Ars Technica",
+    "required": true
+  },
+  {
+    "name": "Ars Unification",
+    "required": true
+  },
+  {
+    "name": "Ars Énergistique",
+    "required": true
+  },
+  {
+    "name": "Artifacts",
+    "required": true
+  },
+  {
+    "name": "Athena",
+    "required": true
+  },
+  {
+    "name": "Atlas API",
+    "required": true
+  },
+  {
+    "name": "AttributeFix",
+    "required": true
+  },
+  {
+    "name": "Auroras",
+    "required": true
+  },
+  {
+    "name": "Bad Wither No Cookie Reloaded",
+    "required": true
+  },
+  {
+    "name": "Balm",
+    "required": true
+  },
+  {
+    "name": "Baubley Heart Canisters",
+    "required": true
+  },
+  {
+    "name": "Better Advancements",
+    "required": true
+  },
+  {
+    "name": "Bibliobiomes Legacy",
+    "required": true
+  },
+  {
+    "name": "Bibliocraft Legacy",
+    "required": true
+  },
+  {
+    "name": "Bibliowoods Legacy",
+    "required": true
+  },
+  {
+    "name": "Blue Flame Burning",
+    "required": true
+  },
+  {
+    "name": "Bookshelf",
+    "required": true
+  },
+  {
+    "name": "BotanyPots",
+    "required": true
+  },
+  {
+    "name": "BotanyPots-Mystical",
+    "required": true
+  },
+  {
+    "name": "BotanyTrees",
+    "required": true
+  },
+  {
+    "name": "Brandon's Core",
+    "required": true
+  },
+  {
+    "name": "Bridging Mod",
+    "required": true
+  },
+  {
+    "name": "Building Gadgets 2",
+    "required": true
+  },
+  {
+    "name": "Byzantine",
+    "required": true
+  },
+  {
+    "name": "Cable Tiers",
+    "required": true
+  },
+  {
+    "name": "Caelus API",
+    "required": true
+  },
+  {
+    "name": "Camol",
+    "required": true
+  },
+  {
+    "name": "CatJammies",
+    "required": true
+  },
+  {
+    "name": "CC: Tweaked",
+    "required": true
+  },
+  {
+    "name": "Charging Gadgets",
+    "required": true
+  },
+  {
+    "name": "Chipped",
+    "required": true
+  },
+  {
+    "name": "Chisel Reborn",
+    "required": true
+  },
+  {
+    "name": "ChoiceTheorem's Overhauled Village",
+    "required": true
+  },
+  {
+    "name": "Chroma Carvings",
+    "required": true
+  },
+  {
+    "name": "Clean Swing",
+    "required": true
+  },
+  {
+    "name": "Cloth Config v15 API",
+    "required": true
+  },
+  {
+    "name": "Cloud Glass",
+    "required": true
+  },
+  {
+    "name": "Clumps",
+    "required": true
+  },
+  {
+    "name": "Cobblegen Galore",
+    "required": true
+  },
+  {
+    "name": "Cobweb",
+    "required": true
+  },
+  {
+    "name": "CodeChicken Lib",
+    "required": true
+  },
+  {
+    "name": "Colorful Hearts",
+    "required": true
+  },
+  {
+    "name": "Colorwheel",
+    "required": true
+  },
+  {
+    "name": "Colorwheel Patcher",
+    "required": true
+  },
+  {
+    "name": "Comforts",
+    "required": true
+  },
+  {
+    "name": "CommonCapabilities",
+    "required": true
+  },
+  {
+    "name": "Compact Machines",
+    "required": true
+  },
+  {
+    "name": "Connected Glass",
+    "required": true
+  },
+  {
+    "name": "Connectivity Mod",
+    "required": true
+  },
+  {
+    "name": "Construction Sticks",
+    "required": true
+  },
+  {
+    "name": "Controlling",
+    "required": true
+  },
+  {
+    "name": "Cooking for Blockheads",
+    "required": true
+  },
+  {
+    "name": "Corail Tombstone",
+    "required": true
+  },
+  {
+    "name": "CorgiLib",
+    "required": true
+  },
+  {
+    "name": "CosmeticArmorReworked",
+    "required": true
+  },
+  {
+    "name": "Crafting On A Stick",
+    "required": true
+  },
+  {
+    "name": "Crafting Tweaks",
+    "required": true
+  },
+  {
+    "name": "Crash Assistant",
+    "required": true
+  },
+  {
+    "name": "Crash Utilities",
+    "required": true
+  },
+  {
+    "name": "Create",
+    "required": true
+  },
+  {
+    "name": "Create Aquatic Ambitions",
+    "required": true
+  },
+  {
+    "name": "Create Crafts & Additions",
+    "required": true
+  },
+  {
+    "name": "Create Hypertube",
+    "required": true
+  },
+  {
+    "name": "Create: Bells & Whistles",
+    "required": true
+  },
+  {
+    "name": "Create: Dragons Plus",
+    "required": true
+  },
+  {
+    "name": "Create: Enchantment Industry",
+    "required": true
+  },
+  {
+    "name": "Creeper Overhaul",
+    "required": true
+  },
+  {
+    "name": "Cristel Lib",
+    "required": true
+  },
+  {
+    "name": "Cryonic Config",
+    "required": true
+  },
+  {
+    "name": "Crystalix",
+    "required": true
+  },
+  {
+    "name": "Cucumber Library",
+    "required": true
+  },
+  {
+    "name": "Cupboard mod",
+    "required": true
+  },
+  {
+    "name": "Curios API",
+    "required": true
+  },
+  {
+    "name": "Cyclops Core",
+    "required": true
+  },
+  {
+    "name": "Dark Mode Everywhere",
+    "required": true
+  },
+  {
+    "name": "Deeper and Darker",
+    "required": true
+  },
+  {
+    "name": "Deimos",
+    "required": true
+  },
+  {
+    "name": "DimStorage",
+    "required": true
+  },
+  {
+    "name": "Dis-Enchanting Table",
+    "required": true
+  },
+  {
+    "name": "Domum Ornamentum",
+    "required": true
+  },
+  {
+    "name": "Draconic Evolution",
+    "required": true
+  },
+  {
+    "name": "Drippy Loading Screen",
+    "required": true
+  },
+  {
+    "name": "Dungeon Crawl",
+    "required": true
+  },
+  {
+    "name": "Dyenamics",
+    "required": true
+  },
+  {
+    "name": "Dyenamics and Friends",
+    "required": true
+  },
+  {
+    "name": "Dyson Cube Project",
+    "required": true
+  },
+  {
+    "name": "Easy Villagers",
+    "required": true
+  },
+  {
+    "name": "EdivadLib",
+    "required": true
+  },
+  {
+    "name": "ElevatorMod",
+    "required": true
+  },
+  {
+    "name": "Embeddium",
+    "required": true
+  },
+  {
+    "name": "EnchantmentDescriptions",
+    "required": true
+  },
+  {
+    "name": "Ender IO",
+    "required": true
+  },
+  {
+    "name": "EnderDrives",
+    "required": true
+  },
+  {
+    "name": "Enderman Overhaul",
+    "required": true
+  },
+  {
+    "name": "EnderStorage",
+    "required": true
+  },
+  {
+    "name": "Entangled",
+    "required": true
+  },
+  {
+    "name": "Eternal Starlight",
+    "required": true
+  },
+  {
+    "name": "Euphoria Patcher",
+    "required": true
+  },
+  {
+    "name": "Everything is Copper",
+    "required": true
+  },
+  {
+    "name": "EvilCraft",
+    "required": true
+  },
+  {
+    "name": "Expanded AE",
+    "required": true
+  },
+  {
+    "name": "ExperienceLib",
+    "required": true
+  },
+  {
+    "name": "Explorer's Compass",
+    "required": true
+  },
+  {
+    "name": "Explorify",
+    "required": true
+  },
+  {
+    "name": "Extended Industrialization",
+    "required": true
+  },
+  {
+    "name": "ExtendedAE",
+    "required": true
+  },
+  {
+    "name": "Extra Disks",
+    "required": true
+  },
+  {
+    "name": "ExtraStorage",
+    "required": true
+  },
+  {
+    "name": "Extreme Reactors",
+    "required": true
+  },
+  {
+    "name": "Extreme Sound Muffler",
+    "required": true
+  },
+  {
+    "name": "Factory Blocks",
+    "required": true
+  },
+  {
+    "name": "FancyMenu",
+    "required": true
+  },
+  {
+    "name": "Farmer's Delight",
+    "required": true
+  },
+  {
+    "name": "Farming for Blockheads",
+    "required": true
+  },
+  {
+    "name": "Fast Suite",
+    "required": true
+  },
+  {
+    "name": "Fast Workbench",
+    "required": true
+  },
+  {
+    "name": "FastFurnace",
+    "required": true
+  },
+  {
+    "name": "Ferrite Core",
+    "required": true
+  },
+  {
+    "name": "Fireproof Boats",
+    "required": true
+  },
+  {
+    "name": "FlickerFix",
+    "required": true
+  },
+  {
+    "name": "Flux Networks",
+    "required": true
+  },
+  {
+    "name": "Forbidden Arcanus",
+    "required": true
+  },
+  {
+    "name": "Formations",
+    "required": true
+  },
+  {
+    "name": "Formations Nether",
+    "required": true
+  },
+  {
+    "name": "Formations Overworld",
+    "required": true
+  },
+  {
+    "name": "FramedBlocks",
+    "required": true
+  },
+  {
+    "name": "Framework",
+    "required": true
+  },
+  {
+    "name": "FTB Chunks",
+    "required": true
+  },
+  {
+    "name": "FTB Essentials",
+    "required": true
+  },
+  {
+    "name": "FTB Filter System",
+    "required": true
+  },
+  {
+    "name": "FTB Jei Extras",
+    "required": true
+  },
+  {
+    "name": "FTB Library",
+    "required": true
+  },
+  {
+    "name": "FTB Quests",
+    "required": true
+  },
+  {
+    "name": "FTB Quests Lang Splitter",
+    "required": true
+  },
+  {
+    "name": "FTB Ranks",
+    "required": true
+  },
+  {
+    "name": "FTB Teams",
+    "required": true
+  },
+  {
+    "name": "FTB Ultimine",
+    "required": true
+  },
+  {
+    "name": "FTB XMod Compat",
+    "required": true
+  },
+  {
+    "name": "Fuel Goes Here",
+    "required": true
+  },
+  {
+    "name": "Functional Storage",
+    "required": true
+  },
+  {
+    "name": "Fusion",
+    "required": true
+  },
+  {
+    "name": "Fzzy Config",
+    "required": true
+  },
+  {
+    "name": "Gateways To Eternity",
+    "required": true
+  },
+  {
+    "name": "GeckoLib 4",
+    "required": true
+  },
+  {
+    "name": "Generator Galore",
+    "required": true
+  },
+  {
+    "name": "Get It Together, Drops!",
+    "required": true
+  },
+  {
+    "name": "Glassential-renewed",
+    "required": true
+  },
+  {
+    "name": "Glodium",
+    "required": true
+  },
+  {
+    "name": "Gravitational Modulating Additional Unit",
+    "required": true
+  },
+  {
+    "name": "GuideME",
+    "required": true
+  },
+  {
+    "name": "Handcrafted",
+    "required": true
+  },
+  {
+    "name": "Hardened Armadillos",
+    "required": true
+  },
+  {
+    "name": "Hellish Trials",
+    "required": true
+  },
+  {
+    "name": "Hey Berry! SHUT UP",
+    "required": true
+  },
+  {
+    "name": "Hostile Neural Networks",
+    "required": true
+  },
+  {
+    "name": "I'm Fast",
+    "required": true
+  },
+  {
+    "name": "Ice And Fire Community Edition",
+    "required": true
+  },
+  {
+    "name": "Iceberg",
+    "required": true
+  },
+  {
+    "name": "Illager-Warship",
+    "required": true
+  },
+  {
+    "name": "ImmediatelyFast",
+    "required": true
+  },
+  {
+    "name": "Immersive Energistics",
+    "required": true
+  },
+  {
+    "name": "Immersive Engineering",
+    "required": true
+  },
+  {
+    "name": "InControl",
+    "required": true
+  },
+  {
+    "name": "Industrial Foregoing",
+    "required": true
+  },
+  {
+    "name": "Industrial Foregoing Souls",
+    "required": true
+  },
+  {
+    "name": "Industrialization Overdrive",
+    "required": true
+  },
+  {
+    "name": "IntegratedCrafting",
+    "required": true
+  },
+  {
+    "name": "IntegratedDynamics",
+    "required": true
+  },
+  {
+    "name": "IntegratedScripting",
+    "required": true
+  },
+  {
+    "name": "IntegratedTerminals",
+    "required": true
+  },
+  {
+    "name": "IntegratedTunnels",
+    "required": true
+  },
+  {
+    "name": "Interdimensional Wireless Transmitter",
+    "required": true
+  },
+  {
+    "name": "Inventory Tweaks Refoxed",
+    "required": true
+  },
+  {
+    "name": "Iris",
+    "required": true
+  },
+  {
+    "name": "Iron Furnaces",
+    "required": true
+  },
+  {
+    "name": "Iron Jetpacks",
+    "required": true
+  },
+  {
+    "name": "Iron's Gems 'n Jewelry",
+    "required": true
+  },
+  {
+    "name": "Iron's Patreon Library",
+    "required": true
+  },
+  {
+    "name": "Iron's Spells 'n Spellbooks",
+    "required": true
+  },
+  {
+    "name": "Item Collectors",
+    "required": true
+  },
+  {
+    "name": "Jade",
+    "required": true
+  },
+  {
+    "name": "Jonn's Trophies",
+    "required": true
+  },
+  {
+    "name": "Journeymap",
+    "required": true
+  },
+  {
+    "name": "Jumpy Boats",
+    "required": true
+  },
+  {
+    "name": "Jupiter",
+    "required": true
+  },
+  {
+    "name": "Just Dire Things",
+    "required": true
+  },
+  {
+    "name": "Just Enough Archaeology",
+    "required": true
+  },
+  {
+    "name": "Just Enough Breeding",
+    "required": true
+  },
+  {
+    "name": "Just Enough Items",
+    "required": true
+  },
+  {
+    "name": "Just Enough Mekanism Multiblocks",
+    "required": true
+  },
+  {
+    "name": "Just Enough Professions (JEP)",
+    "required": true
+  },
+  {
+    "name": "Just Zoom",
+    "required": true
+  },
+  {
+    "name": "KeyBind Bundles",
+    "required": true
+  },
+  {
+    "name": "KeybindsPurger",
+    "required": true
+  },
+  {
+    "name": "Konkrete",
+    "required": true
+  },
+  {
+    "name": "kotlinforforge-5.11.0-all",
+    "required": true
+  },
+  {
+    "name": "KubeJS",
+    "required": true
+  },
+  {
+    "name": "KubeJS Tweaks",
+    "required": true
+  },
+  {
+    "name": "L_Ender's Cataclysm 1.21.1",
+    "required": true
+  },
+  {
+    "name": "Laser Bridges & Doors",
+    "required": true
+  },
+  {
+    "name": "LaserIO",
+    "required": true
+  },
+  {
+    "name": "Legendary Tooltips",
+    "required": true
+  },
+  {
+    "name": "lionfishapi",
+    "required": true
+  },
+  {
+    "name": "Lithostitched",
+    "required": true
+  },
+  {
+    "name": "Little Big Redstone",
+    "required": true
+  },
+  {
+    "name": "Living Things",
+    "required": true
+  },
+  {
+    "name": "Load My F***ing Tags",
+    "required": true
+  },
+  {
+    "name": "Lootr",
+    "required": true
+  },
+  {
+    "name": "Luminax",
+    "required": true
+  },
+  {
+    "name": "Macaw's Bridges",
+    "required": true
+  },
+  {
+    "name": "Macaw's Doors",
+    "required": true
+  },
+  {
+    "name": "Macaw's Fences and Walls",
+    "required": true
+  },
+  {
+    "name": "Macaw's Furniture",
+    "required": true
+  },
+  {
+    "name": "Macaw's Holidays",
+    "required": true
+  },
+  {
+    "name": "Macaw's Lights and Lamps",
+    "required": true
+  },
+  {
+    "name": "Macaw's Paths and Pavings",
+    "required": true
+  },
+  {
+    "name": "Macaw's Roofs",
+    "required": true
+  },
+  {
+    "name": "Macaw's Stairs and Balconies",
+    "required": true
+  },
+  {
+    "name": "Macaw's Trapdoors",
+    "required": true
+  },
+  {
+    "name": "Macaw's Windows",
+    "required": true
+  },
+  {
+    "name": "Mahou Tsukai",
+    "required": true
+  },
+  {
+    "name": "Mama's Herbs and Harvest",
+    "required": true
+  },
+  {
+    "name": "Mama's MerryMaking",
+    "required": true
+  },
+  {
+    "name": "McJtyLib",
+    "required": true
+  },
+  {
+    "name": "ME Requester",
+    "required": true
+  },
+  {
+    "name": "Measurements",
+    "required": true
+  },
+  {
+    "name": "MEGA Cells",
+    "required": true
+  },
+  {
+    "name": "Mekanism",
+    "required": true
+  },
+  {
+    "name": "Mekanism Covers",
+    "required": true
+  },
+  {
+    "name": "Mekanism: Generators",
+    "required": true
+  },
+  {
+    "name": "Mekanism: MoreMachine",
+    "required": true
+  },
+  {
+    "name": "Mekanism: Tools",
+    "required": true
+  },
+  {
+    "name": "Mekanistic Routers",
+    "required": true
+  },
+  {
+    "name": "Melody",
+    "required": true
+  },
+  {
+    "name": "memorysettings mod",
+    "required": true
+  },
+  {
+    "name": "MineColonies",
+    "required": true
+  },
+  {
+    "name": "Mining Gadgets",
+    "required": true
+  },
+  {
+    "name": "MmmMmmMmmMmm",
+    "required": true
+  },
+  {
+    "name": "Mo' Structures",
+    "required": true
+  },
+  {
+    "name": "Mob Grinding Utils",
+    "required": true
+  },
+  {
+    "name": "Model Gap Fix",
+    "required": true
+  },
+  {
+    "name": "Modern Dynamics",
+    "required": true
+  },
+  {
+    "name": "Modern Industrialization",
+    "required": true
+  },
+  {
+    "name": "ModernFix",
+    "required": true
+  },
+  {
+    "name": "Modonomicon",
+    "required": true
+  },
+  {
+    "name": "Modular Force Field System",
+    "required": true
+  },
+  {
+    "name": "Modular Routers",
+    "required": true
+  },
+  {
+    "name": "ModularBees",
+    "required": true
+  },
+  {
+    "name": "Monocle",
+    "required": true
+  },
+  {
+    "name": "MonoLib",
+    "required": true
+  },
+  {
+    "name": "Moog's Structure Lib",
+    "required": true
+  },
+  {
+    "name": "MoogsEndStructures",
+    "required": true
+  },
+  {
+    "name": "MoogsNetherStructures",
+    "required": true
+  },
+  {
+    "name": "MoogsSoaringStructures",
+    "required": true
+  },
+  {
+    "name": "MoogsVoyagerStructures",
+    "required": true
+  },
+  {
+    "name": "Moonlight Lib",
+    "required": true
+  },
+  {
+    "name": "More Dragon Eggs",
+    "required": true
+  },
+  {
+    "name": "More Industrial Foregoing Addons",
+    "required": true
+  },
+  {
+    "name": "More Overlays Updated",
+    "required": true
+  },
+  {
+    "name": "More Red",
+    "required": true
+  },
+  {
+    "name": "More Red x CC:Tweaked Compat",
+    "required": true
+  },
+  {
+    "name": "Mouse Tweaks",
+    "required": true
+  },
+  {
+    "name": "MrCrayfish's Furniture Mod: Refurbished",
+    "required": true
+  },
+  {
+    "name": "Multi-Piston",
+    "required": true
+  },
+  {
+    "name": "Mystical Agradditions",
+    "required": true
+  },
+  {
+    "name": "Mystical Agriculture",
+    "required": true
+  },
+  {
+    "name": "Mystical Customization",
+    "required": true
+  },
+  {
+    "name": "Nature's Compass",
+    "required": true
+  },
+  {
+    "name": "NaturesAura",
+    "required": true
+  },
+  {
+    "name": "NeoAuth",
+    "required": true
+  },
+  {
+    "name": "NetherPortalFix",
+    "required": true
+  },
+  {
+    "name": "No Chat Reports",
+    "required": true
+  },
+  {
+    "name": "No Villager Death Messages",
+    "required": true
+  },
+  {
+    "name": "Nolijium",
+    "required": true
+  },
+  {
+    "name": "Not Enough Glyphs",
+    "required": true
+  },
+  {
+    "name": "NotEnoughAnimations",
+    "required": true
+  },
+  {
+    "name": "Nullscape",
+    "required": true
+  },
+  {
+    "name": "Observable",
+    "required": true
+  },
+  {
+    "name": "Occultism",
+    "required": true
+  },
+  {
+    "name": "Occultism KubeJS",
+    "required": true
+  },
+  {
+    "name": "OctoLib",
+    "required": true
+  },
+  {
+    "name": "Oh The Biomes We've Gone",
+    "required": true
+  },
+  {
+    "name": "Oh The Trees You'll Grow",
+    "required": true
+  },
+  {
+    "name": "Omega Config Architectury",
+    "required": true
+  },
+  {
+    "name": "OpenLoader",
+    "required": true
+  },
+  {
+    "name": "Oracle Index",
+    "required": true
+  },
+  {
+    "name": "Oritech",
+    "required": true
+  },
+  {
+    "name": "OverloadedArmorBar",
+    "required": true
+  },
+  {
+    "name": "oωo",
+    "required": true
+  },
+  {
+    "name": "Pam's HarvestCraft - Crops",
+    "required": true
+  },
+  {
+    "name": "Pam's HarvestCraft - Food Core",
+    "required": true
+  },
+  {
+    "name": "Pam's HarvestCraft - Food Extended",
+    "required": true
+  },
+  {
+    "name": "Pam's HarvestCraft - Trees",
+    "required": true
+  },
+  {
+    "name": "Patchouli",
+    "required": true
+  },
+  {
+    "name": "Pipez",
+    "required": true
+  },
+  {
+    "name": "Placebo",
+    "required": true
+  },
+  {
+    "name": "Player Animator",
+    "required": true
+  },
+  {
+    "name": "PneumaticCraft: Repressurized",
+    "required": true
+  },
+  {
+    "name": "Pocket Storage",
+    "required": true
+  },
+  {
+    "name": "PolyLib",
+    "required": true
+  },
+  {
+    "name": "Polymorph",
+    "required": true
+  },
+  {
+    "name": "Polymorphic Energistics",
+    "required": true
+  },
+  {
+    "name": "PonderJS",
+    "required": true
+  },
+  {
+    "name": "PotionsMaster",
+    "required": true
+  },
+  {
+    "name": "Powah",
+    "required": true
+  },
+  {
+    "name": "PrickleMC",
+    "required": true
+  },
+  {
+    "name": "Prism",
+    "required": true
+  },
+  {
+    "name": "Productive Bees",
+    "required": true
+  },
+  {
+    "name": "Productive Metalworks",
+    "required": true
+  },
+  {
+    "name": "Productive Trees",
+    "required": true
+  },
+  {
+    "name": "Pylons",
+    "required": true
+  },
+  {
+    "name": "QuarryPlus",
+    "required": true
+  },
+  {
+    "name": "Railcraft Reborn",
+    "required": true
+  },
+  {
+    "name": "Rainbows",
+    "required": true
+  },
+  {
+    "name": "Ranged Pumps",
+    "required": true
+  },
+  {
+    "name": "Reap Mod",
+    "required": true
+  },
+  {
+    "name": "Rebind Narrator",
+    "required": true
+  },
+  {
+    "name": "Rechiseled",
+    "required": true
+  },
+  {
+    "name": "Rechiseled: Chipped",
+    "required": true
+  },
+  {
+    "name": "Rechiseled: Create",
+    "required": true
+  },
+  {
+    "name": "Redstone Pen",
+    "required": true
+  },
+  {
+    "name": "Refined Storage",
+    "required": true
+  },
+  {
+    "name": "Refined Storage - Curios Integration",
+    "required": true
+  },
+  {
+    "name": "Refined Storage - JEI Integration",
+    "required": true
+  },
+  {
+    "name": "Refined Storage - Mekanism Integration",
+    "required": true
+  },
+  {
+    "name": "Refined Storage - Quartz Arsenal",
+    "required": true
+  },
+  {
+    "name": "Refined Types",
+    "required": true
+  },
+  {
+    "name": "Regions Unexplored",
+    "required": true
+  },
+  {
+    "name": "Relics",
+    "required": true
+  },
+  {
+    "name": "Reliquary Reincarnations",
+    "required": true
+  },
+  {
+    "name": "reliquified_artifacts",
+    "required": true
+  },
+  {
+    "name": "Repeatable Trial Vaults",
+    "required": true
+  },
+  {
+    "name": "Repurposed Structures",
+    "required": true
+  },
+  {
+    "name": "Resourceful Lib",
+    "required": true
+  },
+  {
+    "name": "Resourcefulconfig",
+    "required": true
+  },
+  {
+    "name": "Restrictions",
+    "required": true
+  },
+  {
+    "name": "RFToolsBase",
+    "required": true
+  },
+  {
+    "name": "RFToolsBuilder",
+    "required": true
+  },
+  {
+    "name": "RFToolsPower",
+    "required": true
+  },
+  {
+    "name": "RFToolsStorage",
+    "required": true
+  },
+  {
+    "name": "RFToolsUtility",
+    "required": true
+  },
+  {
+    "name": "Rhino",
+    "required": true
+  },
+  {
+    "name": "Roots Classic",
+    "required": true
+  },
+  {
+    "name": "ScalableCatsForce-NeoForge-3.7.1-build-11-with-library",
+    "required": true
+  },
+  {
+    "name": "Searchables",
+    "required": true
+  },
+  {
+    "name": "SecurityCraft",
+    "required": true
+  },
+  {
+    "name": "Shiny!",
+    "required": true
+  },
+  {
+    "name": "Shrink",
+    "required": true
+  },
+  {
+    "name": "Silent Gear",
+    "required": true
+  },
+  {
+    "name": "Silent Gear Metalworks",
+    "required": true
+  },
+  {
+    "name": "Silent Lib",
+    "required": true
+  },
+  {
+    "name": "Silent's Gems",
+    "required": true
+  },
+  {
+    "name": "Simple Backups",
+    "required": true
+  },
+  {
+    "name": "Simple Magnets",
+    "required": true
+  },
+  {
+    "name": "Simple Voice Chat",
+    "required": true
+  },
+  {
+    "name": "Simple Weather",
+    "required": true
+  },
+  {
+    "name": "Simply Light",
+    "required": true
+  },
+  {
+    "name": "SmartBrainLib",
+    "required": true
+  },
+  {
+    "name": "SmithingTemplateViewer",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Backpacks",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Backpacks Create Integration",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Core",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Storage",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Storage Create Integration",
+    "required": true
+  },
+  {
+    "name": "Sophisticated Storage In Motion",
+    "required": true
+  },
+  {
+    "name": "Soulplied Energistics",
+    "required": true
+  },
+  {
+    "name": "spark",
+    "required": true
+  },
+  {
+    "name": "Spice of Life: Carrot Edition",
+    "required": true
+  },
+  {
+    "name": "Starbunclemania",
+    "required": true
+  },
+  {
+    "name": "StevesCarts2",
+    "required": true
+  },
+  {
+    "name": "Storage Delight",
+    "required": true
+  },
+  {
+    "name": "Structory",
+    "required": true
+  },
+  {
+    "name": "Structory: Towers",
+    "required": true
+  },
+  {
+    "name": "Structurize",
+    "required": true
+  },
+  {
+    "name": "Stylecolonies",
+    "required": true
+  },
+  {
+    "name": "Super Factory Manager (SFM)",
+    "required": true
+  },
+  {
+    "name": "SuperMartijn642's Config Library",
+    "required": true
+  },
+  {
+    "name": "SuperMartijn642's Core Lib",
+    "required": true
+  },
+  {
+    "name": "Supplementaries",
+    "required": true
+  },
+  {
+    "name": "Sushi Go Crafting",
+    "required": true
+  },
+  {
+    "name": "Sussy Sniffers",
+    "required": true
+  },
+  {
+    "name": "Tempad",
+    "required": true
+  },
+  {
+    "name": "TerraBlender",
+    "required": true
+  },
+  {
+    "name": "Tesseract API",
+    "required": true
+  },
+  {
+    "name": "The Aether",
+    "required": true
+  },
+  {
+    "name": "The Bumblezone",
+    "required": true
+  },
+  {
+    "name": "The Twilight Forest",
+    "required": true
+  },
+  {
+    "name": "The Undergarden",
+    "required": true
+  },
+  {
+    "name": "Theurgy",
+    "required": true
+  },
+  {
+    "name": "Theurgy KubeJS",
+    "required": true
+  },
+  {
+    "name": "Time In A Bottle",
+    "required": true
+  },
+  {
+    "name": "Titanium",
+    "required": true
+  },
+  {
+    "name": "Toast Control",
+    "required": true
+  },
+  {
+    "name": "Tool Belt",
+    "required": true
+  },
+  {
+    "name": "Torchmaster",
+    "required": true
+  },
+  {
+    "name": "Towns and Towers",
+    "required": true
+  },
+  {
+    "name": "Towntalk",
+    "required": true
+  },
+  {
+    "name": "Transfer Labels",
+    "required": true
+  },
+  {
+    "name": "Trash Cans",
+    "required": true
+  },
+  {
+    "name": "TrashSlot",
+    "required": true
+  },
+  {
+    "name": "Tree Tap",
+    "required": true
+  },
+  {
+    "name": "UI Library Mod",
+    "required": true
+  },
+  {
+    "name": "Underground Villages Mod",
+    "required": true
+  },
+  {
+    "name": "Universal Grid",
+    "required": true
+  },
+  {
+    "name": "Universal Sawmill",
+    "required": true
+  },
+  {
+    "name": "Uranus",
+    "required": true
+  },
+  {
+    "name": "Utilitarian",
+    "required": true
+  },
+  {
+    "name": "Utility vest",
+    "required": true
+  },
+  {
+    "name": "Valhelsia Core",
+    "required": true
+  },
+  {
+    "name": "Variants&Ventures",
+    "required": true
+  },
+  {
+    "name": "Villages & Pillages",
+    "required": true
+  },
+  {
+    "name": "Waystones",
+    "required": true
+  },
+  {
+    "name": "When Dungeons Arise",
+    "required": true
+  },
+  {
+    "name": "Wireless Chargers",
+    "required": true
+  },
+  {
+    "name": "Wither Skeleton Tweaks",
+    "required": true
+  },
+  {
+    "name": "WITS",
+    "required": true
+  },
+  {
+    "name": "XNet",
+    "required": true
+  },
+  {
+    "name": "XTones Reworked",
+    "required": true
+  },
+  {
+    "name": "XyCraft Core",
+    "required": true
+  },
+  {
+    "name": "XyCraft Machines",
+    "required": true
+  },
+  {
+    "name": "XyCraft Override",
+    "required": true
+  },
+  {
+    "name": "XyCraft World",
+    "required": true
+  },
+  {
+    "name": "Yeetus Experimentus",
+    "required": true
+  },
+  {
+    "name": "YetAnotherConfigLib",
+    "required": true
+  },
+  {
+    "name": "YUNG's API",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Desert Temples",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Dungeons",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better End Island",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Jungle Temples",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Mineshafts",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Nether Fortresses",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Ocean Monuments",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Strongholds",
+    "required": true
+  },
+  {
+    "name": "YUNG's Better Witch Huts",
+    "required": true
+  },
+  {
+    "name": "YUNG's Extras",
+    "required": true
+  },
+  {
+    "name": "Zero CORE 2",
+    "required": true
+  }
+]

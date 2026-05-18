@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BranlyCraft — Liste des mods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #0c0b14;
+      --surface: #13111f;
+      --border:  rgba(255,255,255,.07);
+      --purple:  #7c3aed;
+      --purpleL: #a78bfa;
+      --gold:    #fbbf24;
+      --text2:   rgba(255,255,255,.55);
+      --text3:   rgba(255,255,255,.3);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: #fff; min-height: 100vh; }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(109,40,217,.14) 0%, transparent 60%);
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(12,11,20,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 11px; color: #fff; text-decoration: none; white-space: nowrap; -webkit-font-smoothing: none; }
+    .nav-logo span { color: var(--purpleL); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--text2); text-decoration: none; transition: color .2s; position: relative; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-active { color: #fff; }
+    .nav-links a.nav-active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 1px; }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .btn-discord { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; background: #5865f2; padding: 8px 18px; border-radius: 6px; transition: background .2s; }
+    .btn-discord:hover { background: #4752c4; }
+    .btn-play { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; color: #000; text-decoration: none; background: var(--gold); padding: 8px 20px; border-radius: 6px; transition: background .2s; }
+    .btn-play:hover { background: #fcd34d; }
+
+    /* HEADER */
+    .page-header {
+      position: relative; z-index: 1;
+      text-align: center; padding: 72px 24px 48px;
+    }
+    .page-kicker {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--purpleL); margin-bottom: 14px;
+    }
+    .page-title {
+      font-size: clamp(28px, 5vw, 52px); font-weight: 900;
+      letter-spacing: -.5px; margin-bottom: 12px;
+    }
+    .page-title span { color: var(--gold); }
+    .page-sub { font-size: 15px; color: var(--text2); line-height: 1.6; }
+
+    /* SEARCH */
+    .search-wrap {
+      position: relative; z-index: 1;
+      max-width: 540px; margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+    .search-wrap svg {
+      position: absolute; left: 38px; top: 50%; transform: translateY(-50%);
+      color: var(--text3); pointer-events: none;
+    }
+    #searchInput {
+      width: 100%; padding: 13px 18px 13px 44px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; color: #fff; font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color .2s;
+    }
+    #searchInput:focus { border-color: rgba(167,139,250,.4); }
+    #searchInput::placeholder { color: var(--text3); }
+
+    /* COUNT */
+    .mod-count {
+      position: relative; z-index: 1;
+      text-align: center; margin-bottom: 32px;
+      font-size: 13px; color: var(--text3);
+    }
+    .mod-count b { color: var(--gold); }
+
+    /* LIST */
+    .mods-wrap {
+      position: relative; z-index: 1;
+      max-width: 960px; margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    #modsList {
+      columns: 4;
+      column-gap: 0;
+      list-style: none;
+    }
+    #modsList li {
+      padding: 6px 12px;
+      font-size: 13px; font-weight: 500; color: var(--text2);
+      border-left: 2px solid transparent;
+      break-inside: avoid;
+      transition: color .15s, border-color .15s;
+    }
+    #modsList li:hover {
+      color: #fff;
+      border-left-color: var(--purpleL);
+    }
+    #modsList li.hidden { display: none; }
+
+    /* Empty */
+    #emptyState {
+      display: none; text-align: center; padding: 60px 0;
+      color: var(--text3); font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 28px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      background: rgba(255,255,255,.01);
+    }
+    footer a { font-size: 13px; color: var(--text3); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: #fff; }
+    footer span { font-size: 12px; color: var(--text3); }
+
+    @media(max-width:900px){ #modsList { columns: 3; } }
+    @media(max-width:640px){ nav { padding: 0 20px; } #modsList { columns: 2; } }
+    @media(max-width:400px){ #modsList { columns: 1; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Branly<span>Craft</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="mods.html" class="nav-active">Mods</a></li>
+    <li><a href="index.html#discord">Discord</a></li>
+    <li><a href="index.html#download">Télécharger</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://discord.gg/aYTyZm8Z7c" target="_blank" class="btn-discord">
+      <svg width="16" height="16" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+      Discord
+    </a>
+    <a href="index.html#download" class="btn-play">Télécharger</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="page-kicker">Modpack BranlyCraft</span>
+  <h1 class="page-title">Les <span>500</span> mods<br>du serveur</h1>
+  <p class="page-sub">Tous les mods installés automatiquement par le launcher.</p>
+</div>
+
+<div class="search-wrap">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  <input type="text" id="searchInput" placeholder="Rechercher un mod…" autocomplete="off" spellcheck="false"/>
+</div>
+
+<div class="mod-count"><b id="visibleCount">476</b> / 500 mods</div>
+
+<div class="mods-wrap">
+  <ul id="modsList">
+        <li>Accelerated Decay</li>
+        <li>Actually Additions</li>
+        <li>Additional Lights</li>
+        <li>Advanced AE</li>
+        <li>Advanced Peripherals</li>
+        <li>AE2 Import Export Card</li>
+        <li>AE2 JEI Integration</li>
+        <li>AE2:Crafting Tree</li>
+        <li>AE2NetworkAnalyzer</li>
+        <li>AE2WTLib</li>
+        <li>AEInfinityBooster</li>
+        <li>AI-Improvements</li>
+        <li>Akashic Tome</li>
+        <li>All The Arcanist Gear</li>
+        <li>All The Leaks</li>
+        <li>All the Wizard Gear</li>
+        <li>AllTheCompressed</li>
+        <li>Allthemodium</li>
+        <li>AllTheOres</li>
+        <li>AllTheTweaks</li>
+        <li>AlmostUnified</li>
+        <li>Amendments</li>
+        <li>Apotheosis</li>
+        <li>Apothic Attributes</li>
+        <li>Apothic Enchanting</li>
+        <li>Apothic Spawners</li>
+        <li>AppleSkin</li>
+        <li>Applied Energistics 2</li>
+        <li>Applied Mekanistics</li>
+        <li>AppliedFlux</li>
+        <li>Aquaculture 2</li>
+        <li>Architectury</li>
+        <li>Ars Additions</li>
+        <li>Ars Controle</li>
+        <li>Ars Creo</li>
+        <li>Ars Elemancy</li>
+        <li>Ars Elemental</li>
+        <li>Ars Nouveau</li>
+        <li>Ars Ocultas</li>
+        <li>Ars Polymorphia</li>
+        <li>Ars Technica</li>
+        <li>Ars Unification</li>
+        <li>Ars Énergistique</li>
+        <li>Artifacts</li>
+        <li>Athena</li>
+        <li>Atlas API</li>
+        <li>AttributeFix</li>
+        <li>Auroras</li>
+        <li>Bad Wither No Cookie Reloaded</li>
+        <li>Balm</li>
+        <li>Baubley Heart Canisters</li>
+        <li>Better Advancements</li>
+        <li>Bibliobiomes Legacy</li>
+        <li>Bibliocraft Legacy</li>
+        <li>Bibliowoods Legacy</li>
+        <li>Blue Flame Burning</li>
+        <li>Bookshelf</li>
+        <li>BotanyPots</li>
+        <li>BotanyPots-Mystical</li>
+        <li>BotanyTrees</li>
+        <li>Brandon's Core</li>
+        <li>Bridging Mod</li>
+        <li>Building Gadgets 2</li>
+        <li>Byzantine</li>
+        <li>Cable Tiers</li>
+        <li>Caelus API</li>
+        <li>Camol</li>
+        <li>CatJammies</li>
+        <li>CC: Tweaked</li>
+        <li>Charging Gadgets</li>
+        <li>Chipped</li>
+        <li>Chisel Reborn</li>
+        <li>ChoiceTheorem's Overhauled Village</li>
+        <li>Chroma Carvings</li>
+        <li>Clean Swing</li>
+        <li>Cloth Config v15 API</li>
+        <li>Cloud Glass</li>
+        <li>Clumps</li>
+        <li>Cobblegen Galore</li>
+        <li>Cobweb</li>
+        <li>CodeChicken Lib</li>
+        <li>Colorful Hearts</li>
+        <li>Colorwheel</li>
+        <li>Colorwheel Patcher</li>
+        <li>Comforts</li>
+        <li>CommonCapabilities</li>
+        <li>Compact Machines</li>
+        <li>Connected Glass</li>
+        <li>Connectivity Mod</li>
+        <li>Construction Sticks</li>
+        <li>Controlling</li>
+        <li>Cooking for Blockheads</li>
+        <li>Corail Tombstone</li>
+        <li>CorgiLib</li>
+        <li>CosmeticArmorReworked</li>
+        <li>Crafting On A Stick</li>
+        <li>Crafting Tweaks</li>
+        <li>Crash Assistant</li>
+        <li>Crash Utilities</li>
+        <li>Create</li>
+        <li>Create Aquatic Ambitions</li>
+        <li>Create Crafts &amp; Additions</li>
+        <li>Create Hypertube</li>
+        <li>Create: Bells &amp; Whistles</li>
+        <li>Create: Dragons Plus</li>
+        <li>Create: Enchantment Industry</li>
+        <li>Creeper Overhaul</li>
+        <li>Cristel Lib</li>
+        <li>Cryonic Config</li>
+        <li>Crystalix</li>
+        <li>Cucumber Library</li>
+        <li>Cupboard mod</li>
+        <li>Curios API</li>
+        <li>Cyclops Core</li>
+        <li>Dark Mode Everywhere</li>
+        <li>Deeper and Darker</li>
+        <li>Deimos</li>
+        <li>DimStorage</li>
+        <li>Dis-Enchanting Table</li>
+        <li>Domum Ornamentum</li>
+        <li>Draconic Evolution</li>
+        <li>Drippy Loading Screen</li>
+        <li>Dungeon Crawl</li>
+        <li>Dyenamics</li>
+        <li>Dyenamics and Friends</li>
+        <li>Dyson Cube Project</li>
+        <li>Easy Villagers</li>
+        <li>EdivadLib</li>
+        <li>ElevatorMod</li>
+        <li>Embeddium</li>
+        <li>EnchantmentDescriptions</li>
+        <li>Ender IO</li>
+        <li>EnderDrives</li>
+        <li>Enderman Overhaul</li>
+        <li>EnderStorage</li>
+        <li>Entangled</li>
+        <li>Eternal Starlight</li>
+        <li>Euphoria Patcher</li>
+        <li>Everything is Copper</li>
+        <li>EvilCraft</li>
+        <li>Expanded AE</li>
+        <li>ExperienceLib</li>
+        <li>Explorer's Compass</li>
+        <li>Explorify</li>
+        <li>Extended Industrialization</li>
+        <li>ExtendedAE</li>
+        <li>Extra Disks</li>
+        <li>ExtraStorage</li>
+        <li>Extreme Reactors</li>
+        <li>Extreme Sound Muffler</li>
+        <li>Factory Blocks</li>
+        <li>FancyMenu</li>
+        <li>Farmer's Delight</li>
+        <li>Farming for Blockheads</li>
+        <li>Fast Suite</li>
+        <li>Fast Workbench</li>
+        <li>FastFurnace</li>
+        <li>Ferrite Core</li>
+        <li>Fireproof Boats</li>
+        <li>FlickerFix</li>
+        <li>Flux Networks</li>
+        <li>Forbidden Arcanus</li>
+        <li>Formations</li>
+        <li>Formations Nether</li>
+        <li>Formations Overworld</li>
+        <li>FramedBlocks</li>
+        <li>Framework</li>
+        <li>FTB Chunks</li>
+        <li>FTB Essentials</li>
+        <li>FTB Filter System</li>
+        <li>FTB Jei Extras</li>
+        <li>FTB Library</li>
+        <li>FTB Quests</li>
+        <li>FTB Quests Lang Splitter</li>
+        <li>FTB Ranks</li>
+        <li>FTB Teams</li>
+        <li>FTB Ultimine</li>
+        <li>FTB XMod Compat</li>
+        <li>Fuel Goes Here</li>
+        <li>Functional Storage</li>
+        <li>Fusion</li>
+        <li>Fzzy Config</li>
+        <li>Gateways To Eternity</li>
+        <li>GeckoLib 4</li>
+        <li>Generator Galore</li>
+        <li>Get It Together, Drops!</li>
+        <li>Glassential-renewed</li>
+        <li>Glodium</li>
+        <li>Gravitational Modulating Additional Unit</li>
+        <li>GuideME</li>
+        <li>Handcrafted</li>
+        <li>Hardened Armadillos</li>
+        <li>Hellish Trials</li>
+        <li>Hey Berry! SHUT UP</li>
+        <li>Hostile Neural Networks</li>
+        <li>I'm Fast</li>
+        <li>Ice And Fire Community Edition</li>
+        <li>Iceberg</li>
+        <li>Illager-Warship</li>
+        <li>ImmediatelyFast</li>
+        <li>Immersive Energistics</li>
+        <li>Immersive Engineering</li>
+        <li>InControl</li>
+        <li>Industrial Foregoing</li>
+        <li>Industrial Foregoing Souls</li>
+        <li>Industrialization Overdrive</li>
+        <li>IntegratedCrafting</li>
+        <li>IntegratedDynamics</li>
+        <li>IntegratedScripting</li>
+        <li>IntegratedTerminals</li>
+        <li>IntegratedTunnels</li>
+        <li>Interdimensional Wireless Transmitter</li>
+        <li>Inventory Tweaks Refoxed</li>
+        <li>Iris</li>
+        <li>Iron Furnaces</li>
+        <li>Iron Jetpacks</li>
+        <li>Iron's Gems 'n Jewelry</li>
+        <li>Iron's Patreon Library</li>
+        <li>Iron's Spells 'n Spellbooks</li>
+        <li>Item Collectors</li>
+        <li>Jade</li>
+        <li>Jonn's Trophies</li>
+        <li>Journeymap</li>
+        <li>Jumpy Boats</li>
+        <li>Jupiter</li>
+        <li>Just Dire Things</li>
+        <li>Just Enough Archaeology</li>
+        <li>Just Enough Breeding</li>
+        <li>Just Enough Items</li>
+        <li>Just Enough Mekanism Multiblocks</li>
+        <li>Just Enough Professions (JEP)</li>
+        <li>Just Zoom</li>
+        <li>KeyBind Bundles</li>
+        <li>KeybindsPurger</li>
+        <li>Konkrete</li>
+        <li>kotlinforforge-5.11.0-all</li>
+        <li>KubeJS</li>
+        <li>KubeJS Tweaks</li>
+        <li>L_Ender's Cataclysm 1.21.1</li>
+        <li>Laser Bridges &amp; Doors</li>
+        <li>LaserIO</li>
+        <li>Legendary Tooltips</li>
+        <li>lionfishapi</li>
+        <li>Lithostitched</li>
+        <li>Little Big Redstone</li>
+        <li>Living Things</li>
+        <li>Load My F***ing Tags</li>
+        <li>Lootr</li>
+        <li>Luminax</li>
+        <li>Macaw's Bridges</li>
+        <li>Macaw's Doors</li>
+        <li>Macaw's Fences and Walls</li>
+        <li>Macaw's Furniture</li>
+        <li>Macaw's Holidays</li>
+        <li>Macaw's Lights and Lamps</li>
+        <li>Macaw's Paths and Pavings</li>
+        <li>Macaw's Roofs</li>
+        <li>Macaw's Stairs and Balconies</li>
+        <li>Macaw's Trapdoors</li>
+        <li>Macaw's Windows</li>
+        <li>Mahou Tsukai</li>
+        <li>Mama's Herbs and Harvest</li>
+        <li>Mama's MerryMaking</li>
+        <li>McJtyLib</li>
+        <li>ME Requester</li>
+        <li>Measurements</li>
+        <li>MEGA Cells</li>
+        <li>Mekanism</li>
+        <li>Mekanism Covers</li>
+        <li>Mekanism: Generators</li>
+        <li>Mekanism: MoreMachine</li>
+        <li>Mekanism: Tools</li>
+        <li>Mekanistic Routers</li>
+        <li>Melody</li>
+        <li>memorysettings mod</li>
+        <li>MineColonies</li>
+        <li>Mining Gadgets</li>
+        <li>MmmMmmMmmMmm</li>
+        <li>Mo' Structures</li>
+        <li>Mob Grinding Utils</li>
+        <li>Model Gap Fix</li>
+        <li>Modern Dynamics</li>
+        <li>Modern Industrialization</li>
+        <li>ModernFix</li>
+        <li>Modonomicon</li>
+        <li>Modular Force Field System</li>
+        <li>Modular Routers</li>
+        <li>ModularBees</li>
+        <li>Monocle</li>
+        <li>MonoLib</li>
+        <li>Moog's Structure Lib</li>
+        <li>MoogsEndStructures</li>
+        <li>MoogsNetherStructures</li>
+        <li>MoogsSoaringStructures</li>
+        <li>MoogsVoyagerStructures</li>
+        <li>Moonlight Lib</li>
+        <li>More Dragon Eggs</li>
+        <li>More Industrial Foregoing Addons</li>
+        <li>More Overlays Updated</li>
+        <li>More Red</li>
+        <li>More Red x CC:Tweaked Compat</li>
+        <li>Mouse Tweaks</li>
+        <li>MrCrayfish's Furniture Mod: Refurbished</li>
+        <li>Multi-Piston</li>
+        <li>Mystical Agradditions</li>
+        <li>Mystical Agriculture</li>
+        <li>Mystical Customization</li>
+        <li>Nature's Compass</li>
+        <li>NaturesAura</li>
+        <li>NeoAuth</li>
+        <li>NetherPortalFix</li>
+        <li>No Chat Reports</li>
+        <li>No Villager Death Messages</li>
+        <li>Nolijium</li>
+        <li>Not Enough Glyphs</li>
+        <li>NotEnoughAnimations</li>
+        <li>Nullscape</li>
+        <li>Observable</li>
+        <li>Occultism</li>
+        <li>Occultism KubeJS</li>
+        <li>OctoLib</li>
+        <li>Oh The Biomes We've Gone</li>
+        <li>Oh The Trees You'll Grow</li>
+        <li>Omega Config Architectury</li>
+        <li>OpenLoader</li>
+        <li>Oracle Index</li>
+        <li>Oritech</li>
+        <li>OverloadedArmorBar</li>
+        <li>oωo</li>
+        <li>Pam's HarvestCraft - Crops</li>
+        <li>Pam's HarvestCraft - Food Core</li>
+        <li>Pam's HarvestCraft - Food Extended</li>
+        <li>Pam's HarvestCraft - Trees</li>
+        <li>Patchouli</li>
+        <li>Pipez</li>
+        <li>Placebo</li>
+        <li>Player Animator</li>
+        <li>PneumaticCraft: Repressurized</li>
+        <li>Pocket Storage</li>
+        <li>PolyLib</li>
+        <li>Polymorph</li>
+        <li>Polymorphic Energistics</li>
+        <li>PonderJS</li>
+        <li>PotionsMaster</li>
+        <li>Powah</li>
+        <li>PrickleMC</li>
+        <li>Prism</li>
+        <li>Productive Bees</li>
+        <li>Productive Metalworks</li>
+        <li>Productive Trees</li>
+        <li>Pylons</li>
+        <li>QuarryPlus</li>
+        <li>Railcraft Reborn</li>
+        <li>Rainbows</li>
+        <li>Ranged Pumps</li>
+        <li>Reap Mod</li>
+        <li>Rebind Narrator</li>
+        <li>Rechiseled</li>
+        <li>Rechiseled: Chipped</li>
+        <li>Rechiseled: Create</li>
+        <li>Redstone Pen</li>
+        <li>Refined Storage</li>
+        <li>Refined Storage - Curios Integration</li>
+        <li>Refined Storage - JEI Integration</li>
+        <li>Refined Storage - Mekanism Integration</li>
+        <li>Refined Storage - Quartz Arsenal</li>
+        <li>Refined Types</li>
+        <li>Regions Unexplored</li>
+        <li>Relics</li>
+        <li>Reliquary Reincarnations</li>
+        <li>reliquified_artifacts</li>
+        <li>Repeatable Trial Vaults</li>
+        <li>Repurposed Structures</li>
+        <li>Resourceful Lib</li>
+        <li>Resourcefulconfig</li>
+        <li>Restrictions</li>
+        <li>RFToolsBase</li>
+        <li>RFToolsBuilder</li>
+        <li>RFToolsPower</li>
+        <li>RFToolsStorage</li>
+        <li>RFToolsUtility</li>
+        <li>Rhino</li>
+        <li>Roots Classic</li>
+        <li>ScalableCatsForce-NeoForge-3.7.1-build-11-with-library</li>
+        <li>Searchables</li>
+        <li>SecurityCraft</li>
+        <li>Shiny!</li>
+        <li>Shrink</li>
+        <li>Silent Gear</li>
+        <li>Silent Gear Metalworks</li>
+        <li>Silent Lib</li>
+        <li>Silent's Gems</li>
+        <li>Simple Backups</li>
+        <li>Simple Magnets</li>
+        <li>Simple Voice Chat</li>
+        <li>Simple Weather</li>
+        <li>Simply Light</li>
+        <li>SmartBrainLib</li>
+        <li>SmithingTemplateViewer</li>
+        <li>Sophisticated Backpacks</li>
+        <li>Sophisticated Backpacks Create Integration</li>
+        <li>Sophisticated Core</li>
+        <li>Sophisticated Storage</li>
+        <li>Sophisticated Storage Create Integration</li>
+        <li>Sophisticated Storage In Motion</li>
+        <li>Soulplied Energistics</li>
+        <li>spark</li>
+        <li>Spice of Life: Carrot Edition</li>
+        <li>Starbunclemania</li>
+        <li>StevesCarts2</li>
+        <li>Storage Delight</li>
+        <li>Structory</li>
+        <li>Structory: Towers</li>
+        <li>Structurize</li>
+        <li>Stylecolonies</li>
+        <li>Super Factory Manager (SFM)</li>
+        <li>SuperMartijn642's Config Library</li>
+        <li>SuperMartijn642's Core Lib</li>
+        <li>Supplementaries</li>
+        <li>Sushi Go Crafting</li>
+        <li>Sussy Sniffers</li>
+        <li>Tempad</li>
+        <li>TerraBlender</li>
+        <li>Tesseract API</li>
+        <li>The Aether</li>
+        <li>The Bumblezone</li>
+        <li>The Twilight Forest</li>
+        <li>The Undergarden</li>
+        <li>Theurgy</li>
+        <li>Theurgy KubeJS</li>
+        <li>Time In A Bottle</li>
+        <li>Titanium</li>
+        <li>Toast Control</li>
+        <li>Tool Belt</li>
+        <li>Torchmaster</li>
+        <li>Towns and Towers</li>
+        <li>Towntalk</li>
+        <li>Transfer Labels</li>
+        <li>Trash Cans</li>
+        <li>TrashSlot</li>
+        <li>Tree Tap</li>
+        <li>UI Library Mod</li>
+        <li>Underground Villages Mod</li>
+        <li>Universal Grid</li>
+        <li>Universal Sawmill</li>
+        <li>Uranus</li>
+        <li>Utilitarian</li>
+        <li>Utility vest</li>
+        <li>Valhelsia Core</li>
+        <li>Variants&amp;Ventures</li>
+        <li>Villages &amp; Pillages</li>
+        <li>Waystones</li>
+        <li>When Dungeons Arise</li>
+        <li>Wireless Chargers</li>
+        <li>Wither Skeleton Tweaks</li>
+        <li>WITS</li>
+        <li>XNet</li>
+        <li>XTones Reworked</li>
+        <li>XyCraft Core</li>
+        <li>XyCraft Machines</li>
+        <li>XyCraft Override</li>
+        <li>XyCraft World</li>
+        <li>Yeetus Experimentus</li>
+        <li>YetAnotherConfigLib</li>
+        <li>YUNG's API</li>
+        <li>YUNG's Better Desert Temples</li>
+        <li>YUNG's Better Dungeons</li>
+        <li>YUNG's Better End Island</li>
+        <li>YUNG's Better Jungle Temples</li>
+        <li>YUNG's Better Mineshafts</li>
+        <li>YUNG's Better Nether Fortresses</li>
+        <li>YUNG's Better Ocean Monuments</li>
+        <li>YUNG's Better Strongholds</li>
+        <li>YUNG's Better Witch Huts</li>
+        <li>YUNG's Extras</li>
+        <li>Zero CORE 2</li>
+  </ul>
+  <div id="emptyState">Aucun mod trouvé pour "<span id="emptyQuery"></span>"</div>
+</div>
+
+<footer>
+  <a href="index.html">← Accueil</a>
+  <span>BranlyCraft · Saison 2 · Minecraft 1.21.1</span>
+  <a href="https://discord.gg/aYTyZm8Z7c" target="_blank">Discord</a>
+</footer>
+
+<script>
+const items = document.querySelectorAll('#modsList li');
+const countEl = document.getElementById('visibleCount');
+const emptyEl = document.getElementById('emptyState');
+const emptyQ  = document.getElementById('emptyQuery');
+
+// Soulignement doré au clic sur les liens nav
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', function() {
+    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('nav-active'));
+    this.classList.add('nav-active');
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  let visible = 0;
+  items.forEach(li => {
+    const match = !q || li.textContent.toLowerCase().includes(q);
+    li.classList.toggle('hidden', !match);
+    if (match) visible++;
+  });
+  countEl.textContent = visible;
+  emptyEl.style.display = visible === 0 ? 'block' : 'none';
+  if (visible === 0) emptyQ.textContent = this.value;
+});
+</script>
+</body>
+</html>
